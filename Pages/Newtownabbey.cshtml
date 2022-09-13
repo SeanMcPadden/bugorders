@@ -1,0 +1,57 @@
+﻿@page
+@model BugOrders.Pages.NewtownabbeyModel
+@{
+}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/SeansStylesheet.css" />
+    </head>
+    <body>
+        <a asp-page="/Index">Home</a>
+        <br/>
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col-8">
+                <h1 class="h1">Newtownabbey Bugs</h1>
+                <h4 class="h4">Newtownabbey Bugs</h4>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <br/>
+        <div class="row polaroid-whole">
+            <div class="col-2 polaroid-surround">
+                <p class="polaroid-surround">Bugs do much better in bigger containers with the correct food,
+                    water and temperature.</p>
+                </div>
+            <div class="col-1"></div>
+            <div class="col-6 polaroid">
+                <img src="@Model.File" style="width:100%">
+                <div class="polaroidContainer">
+                    <p>Regular updates of our Livefood section<br />
+                       This was last updated on @Model.LatestUpdate</p>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2 polaroid-surround">
+                <p class="polaroid-surround">We also have Bug Grub and Bug Gel that you can purchase in store.
+                For a healthier, happier bug and a happier, healthier Reptile.</p>
+            </div>
+        </div>
+
+
+        <div class="polaroid-for-mobile">
+            <img class="img-for-mobile" src="@Model.File" />
+            <br/>
+            <br/>
+            <p class="p-for-mobile">Regular updates of our Livefood section<br />
+               This was last updated on @Model.LatestUpdate</p>
+        </div>
+    </body>
+</html>
+
+
+

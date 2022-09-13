@@ -1,0 +1,93 @@
+﻿@page
+@model BugOrdersApp.Pages.UpdateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+
+<html>
+    <head>
+        <style>
+        form  { display: table;      }
+        p     { display: table-row;  }
+        label { display: table-cell; }
+        input { display: table-cell; }
+        </style>
+        <link rel="stylesheet" href="~/css/SeansStylesheet.css" />
+    </head>
+    <body>
+        <a asp-page="/Index">Home</a>
+        <div class="row">
+            <div class="col-3" style="text-align: center"></div>
+            <div>
+                <div>
+
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+        <br/>
+        <h1 class="h1">Update Store Bugs</h1>
+        <h4 class="h4">Update Store Bugs</h4>
+        <br/>
+        <br/>
+        <div class="row container-for-desktop">
+            <div class="col-3" style="text-align: center"></div>
+            <div>
+                <div>
+                    <form method="post" enctype="multipart/form-data">
+                        <p>
+                            <label class="formLabel" style="padding: 10px">Description: </label>
+                            <input class="formLabel" id="Description" name="Description" asp-for="Update.Description">
+                        </p>
+@*                       
+                        I took this out and automated the DateTime to prevent bugs.
+                         <p>
+                            <label class="formLabel" style="padding: 10px">DateTime</label>
+                            <input class="formLabel" id="DateTime" name="DateTime" asp-for="Update.DateTime" />
+                        </p>*@
+                        <p>
+                            <label class="formLabel" style="padding: 10px">Image: </label>
+                            <input class="file-upload-input" id="ImageURL" name="imageURL" type="file" onchange="readURL(this)" accept="Image/*" 
+                            asp-for="Update.ImageURL"/>
+                        </p>
+                        <br/>
+                        <p>
+                            <button class="btn btn-success" type="submit">Submit</button>   
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+        <div class="row container-for-mobile">
+            <div >
+                <div class="update-container-for-mobile">
+                    <form method="post" enctype="multipart/form-data">
+                        <p>
+                            <label class="formLabel" style="padding: 10px">Description: </label>
+                            <input class="formLabel" id="Description" name="Description" asp-for="Update.Description">
+                        </p>
+                         <p>
+                            <label class="formLabel" style="padding: 10px">DateTime</label>
+                            <input class="formLabel" id="DateTime" name="DateTime" asp-for="Update.DateTime" />
+                        </p>
+                        <p>
+                            <label class="formLabel" style="padding: 10px">Image: </label>
+                            <input class="file-upload-input" id="ImageURL" name="imageURL" type="file" onchange="readURL(this)" accept="Image/*" 
+                            asp-for="Update.ImageURL"/>
+                        </p>
+                        <br/>
+                        <p>
+                            <button class="btn btn-success" type="submit">Submit</button>   
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
