@@ -1,0 +1,68 @@
+﻿@page
+@model LogoutModel
+@{
+    //ViewData["Title"] = "Log out";
+}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/SeansStylesheet.css"/>
+    </head>
+    <body>
+        <a asp-page="/index">Home</a>
+        <br />
+        <br />
+        <h4>Do you wish to log out?</h4>
+        <br />
+        <div class="row container-for-desktop">
+            <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h3 class="card-title"> Log Out Here</h3>
+                                @{
+                                    if (User.Identity.IsAuthenticated)
+                                    {
+                                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                                <button type="submit" class="btn btn-success">Click here to Logout</button>
+                                            </form>
+                                    }
+                                    else
+                                    {
+                                            <p>You have successfully logged out of the application.</p>
+                                    }
+                                }        
+                          </div>
+                    </div>
+                </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row container-for-mobile">
+                <div class="col-12">
+                    <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h3 class="card-title"> Log Out Here</h3>
+                                @{
+                                    if (User.Identity.IsAuthenticated)
+                                    {
+                                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                                <button type="submit" class="btn btn-success">Click here to Logout</button>
+                                            </form>
+                                    }
+                                    else
+                                    {
+                                            <p>You have successfully logged out of the application.</p>
+                                    }
+                                }        
+                          </div>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
